@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>This is the title</title>
+<meta charset="utf-8">
+<script>
+function log() {
+  try {
+    console.log.apply(console, arguments);
+  }
+  catch(e){
+    try {
+      opera.postError.apply(opera, arguments);
+    }
+    catch(e){
+      alert(Array.prototype.join.call(arguments, " "));
+    }
+  }
+}
+
+var x = 223;
+log(x);
+
+
+
+</script>
+
+</head>
+<body>
+<h1>heading of the page</h1>
+<p>Some filler text</p>
+
+</body>
+
+
+
+
+</html>
